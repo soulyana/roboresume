@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+</head>
+
+<body>
+<h1>Result</h1>
+<p>Education successfully added to your resume in Robo Resume Database! Congrats!</p>
+
+<h2>Education</h2>
+<p th:text="'Degree: ' + ${neweducation.degree}"/>
+<p th:text="'Your univeristy: ' + ${neweducation.university}"/>
+<p th:text="'Your graduation year: ' + ${neweducation.gradYear}"/>
+
+<div>
+    <a href="/addeducation">Add additional education</a><br/>
+    <a href="/addexperience">Add additional experience</a><br/>
+    <a href="/addskill">Add additional skill</a><br/>
+    <a href="/displayall">Display user profile</a><br/>
+</div>
+
+</body>
+</html>

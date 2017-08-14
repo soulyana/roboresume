@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+</head>
+
+<body>
+<h1>Result</h1>
+<p>Skills successfully added to your resume in Robo Resume Database! Congrats!</p>
+
+<h2>Skills</h2>
+<p th:text="'Skill: ' + ${newskill.skillname}"/>
+<p th:text="'Rating: ' + ${newskill.skillrating}"/>
+
+<div>
+<a href="/addeducation">Add additional education</a><br/>
+<a href="/addexperience">Add additional experience</a><br/>
+<a href="/addskill">Add additional skill</a><br/>
+<a href="/displayall">Display user profile</a><br/>
+</div>
+
+</body>
+</html>

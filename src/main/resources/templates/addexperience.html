@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+</head>
+<body>
+<p>Please add your experiences.</p>
+<h1>Experience</h1>
+<form action="#" th:action="@{/addexperience}" th:object="${newexperience}" method="post">
+
+    <span th:if="${#fields.hasErrors('title')}" th:error="*{title}">Title is required</span>
+    <p>Enter your title: <input> type="text" th:field="*{title}"/></p>
+
+    <span th:if="${#fields.hasErrors('organization')}" th:error="*{org}">Organization is required</span>
+    <p>Enter your Organization: <input> type="text" th:field="*{org}"/></p>
+
+    <span th:if="${#fields.hasErrors('startTime')}" th:error="*{startTime}">Start date is required; add in designated format</span>
+    <p>Enter your start date (month and year): <input> type="text" th:field="*{startTime}"/></p>
+
+    <span th:if="${#fields.hasErrors('endTime')}" th:error="*{endTime}">End date is required; add in designated format</span>
+    <p>Enter your end date (month and year): Enter "present" if current job. <input> type="text" th:field="*{endTime}"/></p>
+
+    <span th:if="${#fields.hasErrors('duty1')}" th:error="*{duty1}">Duty 1 is required</span>
+    <p>Enter your duty 1: <input type="text" th:field="*{duty1}" /></p>
+
+    <span th:if="${#fields.hasErrors('duty2')}" th:error="*{duty2}">Duty 2 is required</span>
+    <p>Enter your duty 2: <input type="text" th:field="*{duty2}" /></p>
+
+    <p><input type="submit" value="Add experience"/> <input type="reset" value="Reset"/></p>
+</form>
+
+
+</body>
+</html>

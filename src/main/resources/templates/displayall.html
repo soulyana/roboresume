@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume added</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+</head>
+<body>
+
+    <p>You succesfully added your resume to Robo Resume Database! Congrats!</p>
+
+    <h2>Robo Resume Result</h2>
+    <th:block th:each="oneperson:${person}">
+        <p th:text="'Your name: ' + ${oneperson.name}"/>
+        <p th:text="'Your name: ' + ${oneperson.name}"/>    </th:block>
+</body>
+</html>
